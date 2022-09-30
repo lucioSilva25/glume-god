@@ -6,7 +6,7 @@ const SettingsScreen = ({navigation}) => {
             
             <Button
                 title='Ir a mi perfil'
-                onPress = {()=>{navigation.navigate('Profile')}}
+                onPress = {()=>{navigation.navigate('Login')}}
             />
             <Button
                 title='Graficos'

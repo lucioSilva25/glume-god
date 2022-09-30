@@ -1,12 +1,13 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native'
+
 const DetailsScreen = ({navigation}) => {
     return (
         <View>
             
             <Button
                 title='Ir a mi perfil'
-                onPress = {()=>{navigation.navigate('Profile')}}
+                onPress = {()=>{navigation.navigate('Login')}}
             />
             <Button
                 title='Graficos'
