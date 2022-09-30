@@ -2,6 +2,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import Login from '../Screens/Login';
+import LoginMedico from '../Screens/Medico/LoginMedico';
+import LoginPaciente from '../Screens/Paciente/LoginPaciente';
+import RegistroMedico from '../Screens/Medico/RegistroMedico';
+import RegistroPaciente from '../Screens/Paciente/RegistroPaciente';
 import Home from '../Screens/Home';
 import SignUp from '../Screens/SignUp';
 import Graph from '../Screens/Graph';
@@ -20,9 +24,25 @@ const MainStack = () => {
             />
 
             <Stack.Screen
-                name='Login'
-                component={Login}
+                name='LoginMedico'
+                component={LoginMedico}
             />
+            <Stack.Screen
+                name='LoginPaciente'
+                component={LoginPaciente}
+            />
+
+            <Stack.Screen
+                name='RegistroMedico'
+                component={RegistroMedico}
+            />
+
+            <Stack.Screen
+                name='RegistroPaciente'
+                component={RegistroPaciente}
+            />
+
+
             <Stack.Screen
                 name='SignUp'
                 component={SignUp}

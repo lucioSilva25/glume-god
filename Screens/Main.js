@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, Image, TouchableHighlight, TouchableOpa
 import { Box, Heading, VStack, FormControl, Input, Link, HStack, Center, NativeBaseProvider } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import CustomButton from '../components/CustomButton';
-import Login from '../Screens/Login';
+
 
 const Main = () => {
 
@@ -28,8 +28,9 @@ const Main = () => {
                         </Heading>
 
                         <VStack>
-                            <CustomButton text={'Medico'} onPress={() => navigation.navigate('Login')} />
-                            <CustomButton text={'Paciente'} onPress={() => navigation.navigate('Login')} />
+                            
+                            <CustomButton text={'Medico'} onPress={() => navigation.navigate('LoginMedico')} />
+                            <CustomButton text={'Paciente'} onPress={() => navigation.navigate('LoginPaciente')} />
 
                             <HStack mt="6" justifyContent="center">
                                 <Text fontSize="sm" color="coolGray.600" _dark={{
@@ -44,12 +45,13 @@ const Main = () => {
                                 }} href="#">
                                     Regístrate
                                 </Link>
-                            </HStack>
 
+                            </HStack>
                         </VStack>
                     </Box>
                 </Center>
             </NativeBaseProvider>
+            
         </View>
     )
 }
