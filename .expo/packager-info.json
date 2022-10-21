@@ -3,6 +3,7 @@
   "packagerPort": 19000,
   "expoServerNgrokUrl": "https://jh-sgi.anonymous.glume-god.exp.direct",
   "packagerNgrokUrl": "https://jh-sgi.anonymous.glume-god.exp.direct",
-  "ngrokPid": 15284,
-  "webpackServerPort": 19006
+  "ngrokPid": 1524,
+  "webpackServerPort": null,
+  "packagerPid": null
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Button, Dimensions, StyleSheet, center} from 'react-native'
-import{NativeBaseProvider, Text,Box, Avatar, HStack,} from'native-base'
+import{NativeBaseProvider, Text,Box, Avatar, HStack,VStack, Center, Badge, Spacer, Flex} from'native-base'
 
 import {
   LineChart,
@@ -72,7 +72,7 @@ const Graph = ({ navigation }) => {
         }
       />
       
-      <HStack justifyContent="center" space={2}>
+      <HStack justifyContent="center" space={10}>
       <Avatar bg="green.500" source={{
       uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     }}>
@@ -93,21 +93,28 @@ const Graph = ({ navigation }) => {
     }}>
        
       </Avatar>
-    </HStack>;
+    </HStack>
+
+
+    <VStack space={4} alignItems="center"style={{
+          alignItems: 'center',
+          marginTop: 20,
+          marginBottom:50,
+
+        }
+        }
+        
+        >
+      
+      <Center w="80" h="40" bg="green.600" rounded="md" shadow={3} />
+      
+    </VStack>
+ 
       </NativeBaseProvider>
       
      
 
-      <ProgressChart
-        data={data1}
-        width={Dimensions.get('window').width}
-        height={200}
-        strokeWidth={16}
-        radius={32}
-        chartConfig={chartConfig}
-        hideLegend={false}
-
-      />
+      
 
 
     </View>
