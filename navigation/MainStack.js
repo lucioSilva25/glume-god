@@ -53,6 +53,11 @@ const MainStack = () => {
                 component={MainContainer}
             />
 
+            <Stack.Screen
+                name='Graph'
+                component={Graph}
+            />
+
 
 
         </Stack.Navigator>
