@@ -11,7 +11,7 @@ import Graph from '../Screens/Graph';
 
 //Screen names
 const homeName = "Graph";
-const detailsName = "Details";
+const detailsName = "Mi Perfil";
 const settingsName = "Settings";
 
 const Tab = createBottomTabNavigator();

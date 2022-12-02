@@ -4,11 +4,11 @@ const SettingsScreen = ({navigation}) => {
     return (
         <View>
             
-            <Button
+            <Button color="#147845"
                 title='Ir a mi perfil'
                 onPress = {()=>{navigation.navigate('Login')}}
             />
-            <Button
+            <Button color="#147845"
                 title='Graficos'
                 onPress = {()=>{navigation.navigate('Graph')}}
             />

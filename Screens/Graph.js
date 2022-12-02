@@ -1,17 +1,10 @@
 import React from 'react'
-import { View, Button, Dimensions, StyleSheet, center} from 'react-native'
-import{NativeBaseProvider, Text,Box, Avatar, HStack,VStack, Center, Badge, Spacer, Flex,Icon, Foundation} from'native-base'
-
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart
-} from "react-native-chart-kit";
+import { View, StyleSheet} from 'react-native'
+import{NativeBaseProvider, Text, Avatar, HStack,VStack} from'native-base'
+import {LineChart} from "react-native-chart-kit";
 
 const Graph = ({ navigation }) => {
+
   const data = {
     labels: ["12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
     datasets: [
@@ -33,7 +26,7 @@ const Graph = ({ navigation }) => {
     backgroundGradientFromOpacity: 100,
     backgroundGradientTo: "#ffffff",
     backgroundGradientToOpacity: 100,
-    color: (opacity = 1) => `rgb(0, 153, 51, ${opacity})`,
+    color: (opacity = 1) => "#0D8E38",
     strokeWidth: 2, // optional, default 3
     barPercentage: 0.5,
     useShadowColorFromDataset: false // optional
@@ -55,15 +48,16 @@ const Graph = ({ navigation }) => {
 
       <NativeBaseProvider>
       
-      <Text bold fontSize="2xl" padding="10px"> Hola!👋 </Text>
+      <Text bold fontSize="2xl" padding="5px"> Hola!👋 </Text>
             <HStack space={190}>
-      <Text bold fontSize="3xl" padding="10px">Luca Pablo</Text>
+      <Text bold fontSize="3xl" marginTop="-25px" padding="10px">Luca Pablo</Text>
 
 
       
-      <Avatar bg="green.500" source={{
+      <Avatar marginTop="-30px" bg="green.500" source={{
       uri: "https://www.finedininglovers.it/sites/g/files/xknfdk1106/files/styles/open_graph_image/public/fdl_content_import_it/luca-sacchi.jpg?itok=KZld-OLy"
-    }}>
+    }}> NB
+    <Avatar.Badge bg="green.500" />
        
       </Avatar>
   
@@ -76,10 +70,10 @@ const Graph = ({ navigation }) => {
         width={380}
         height={220}
         chartConfig={chartConfig}
+        bezier
         style={{
           alignItems: 'center',
-          marginTop: 80,
-          marginBottom:50,
+          marginTop: 30,
 
         }
         }
@@ -88,18 +82,17 @@ const Graph = ({ navigation }) => {
   
 
     <VStack py="8" space={8} alignItems="center" justifyContent="center" flexDirection="row">
-    <VStack  width="380" height="250" m="3" w="140" borderRadius="xl" p="3" bg="green.200" space={2} alignItems="center" justifyContent="center">
+    <VStack  width="380" height="200" m="3" w="140" borderRadius="xl" p="3" bg="#147845" space={2} alignItems="center" justifyContent="center">
         
-            <Text bold fontSize="lg" textAlign="center" _dark={{
-            color: "green.800"
+            <Text bold fontSize="lg" color="#ACF4C4" textAlign="center" _dark={{
+            
           }}>
               Grupo Sanguineo
             </Text>
           </VStack>
-          <VStack width="380" height="250" m="3" w="140" borderRadius="xl" p="3" bg="green.200" space={2} alignItems="center" justifyContent="center">
+          <VStack width="380" height="200" m="3" w="140" borderRadius="xl" p="3" bg="#147845" space={2} alignItems="center" justifyContent="center">
         
-            <Text bold fontSize="lg" textAlign="center" _dark={{
-            color: "green.200"
+            <Text bold fontSize="lg" color="#ACF4C4" textAlign="center" _dark={{
           }}>
               Peso (Kg)
             </Text>
